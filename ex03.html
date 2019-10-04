@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = "Tôi yêu ngôn ngữ lập trình Javascript";
+    let regex = /^[a]$/;
+    let count = 0;
+    for(let i = 0;i<input.length;i++){
+        if(regex.test(input[i])){
+            count++;
+        }
+    }
+    document.write("There are "+count+" letter a in the string<br>");
+
+    let words = input.split(" ");
+    document.write("After split: "+words+"<br>");
+
+    count =0;
+    regex =/^[a-zA-Zôêữậì]$/;
+    for(let i = 0;i<input.length;i++){
+        if(regex.test(input[i])){
+            count++;
+        }
+    }
+    document.write("Number of letter in the String: "+count+"<br>");
+    input.replace("Javascript","Typescript");
+    document.write("After replace: "+input.replace("Javascript","Typescript")+"<br>");
+</script>
+</body>
+</html>
